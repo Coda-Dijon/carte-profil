@@ -30,3 +30,5 @@
 ## Correction
 
 Proposition de correction dans le dossier [correction](correction).
+
+- [Correction visible en live](coda-dijon.github.io/carte-profil/correction)
