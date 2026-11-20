@@ -1,0 +1,180 @@
+
+/* Reset CSS : border-box par défaut */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul li, ol li {
+    margin-block: .5rem;
+}
+
+/* Fin reset CSS */
+
+:root {
+    background-color: #050419;
+    font-family: sans-serif;
+}
+
+
+.card {
+    background-color: #260266;
+    margin: 2rem;
+    /* 3.
+      **Dimensions flexibles** : Fixer la largeur de la carte et la centrer horizontalement.
+    */
+    min-width: 22rem;
+    max-width: max(50rem, 60vw);
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+        2. **Modèle de boîte** : Donner la carte un "rembourrage" intérieur, une bordure arrondie, et une ombre portée.
+     */
+    box-shadow: .75rem .75rem 0 #ddf849;
+    border-radius: 1rem;
+
+    border: #d8d8d8 1px solid;
+}
+
+.card p, .card li, .card a {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.card p, .card ul {
+    padding-inline: 3rem;
+
+}
+
+.card h2 {
+    padding-inline: 1rem;
+}
+
+.card > header {
+    background-color: #1e0d39;
+    background-image: linear-gradient(#1e0d39 60%, #260266);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.card > header, .card > footer, .card > section {
+    color: lightgray;
+    /*
+    2. **Modèle de boîte** : Donner la carte un "rembourrage" intérieur, une bordure arrondie, et une ombre portée.
+    */
+    padding-inline: 1rem;
+    padding-block: .5rem;
+}
+
+.card > footer {
+
+    background-color: #260266;
+    background-image: linear-gradient(#260266, 60%, #1e0d39);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+.card h1::after {
+    content: "   ";
+    border-bottom: #ddf849 4px solid;
+
+}
+
+/* 6. **Pseudo-éléments** : Sur le nom, apposer un badge "En ligne" (petit cercle vert) à l'aide d'un pseudo-élément approprié.
+ */
+.card h1::before {
+    content: "🟢 ";
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*width: 1em;*/
+    /*height: 1em;*/
+    /*background-color: #00fa00;*/
+    /*border-radius: 50%;*/
+}
+
+.profile-pic {
+    /* 4. **Image circulaire** : Rendre l'image de profil circulaire. */
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border: #ddf849 1px solid;
+}
+
+/*  5. **Pseudo-classes** : Stylisez les liens focalisés et au survol de la souris (appliquer le même style aux deux pour l'accessibilité). */
+.card a:focus, .card a:hover {
+    color: #ddf849;
+}
+
+.stats-table {
+    border-collapse: collapse;
+    width: min(90%, 30rem);
+    margin-inline: auto;
+}
+
+.stats-table caption {
+    font-style: italic;
+    color: #CCC;
+    margin-block: .5rem;
+}
+
+.stats-table thead, .stats-table tbody {
+    color: #CCC;
+}
+
+.stats-table thead {
+    background-color: #1e0d39;
+}
+
+.stats-table tbody {
+    background-color: black;
+}
+
+.stats-table tbody th {
+    font-style: italic;
+}
+
+.stats-table td, .stats-table th {
+    text-align: left;
+    padding-block: .75rem;
+    padding-inline: 1rem;
+    border: 1px solid #aeaeae;
+    border-collapse: collapse;
+}
+
+.stats-table td {
+    color: #ddf849;
+}
+
+
+/* Hors challenge */
+
+.card ul {
+    list-style-type: square;
+    color: #ddf849;
+}
+
+.card a {
+    color: #CCC;
+}
+
+.card b {
+    background: linear-gradient(transparent 40%, #575110 60%);
+}
+
+.hashtag {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.hashtag::before {
+    content: "#";
+}
+
+*:focus {
+    outline-color: #ddf849;
+}
